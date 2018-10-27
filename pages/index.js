@@ -1,7 +1,14 @@
 import React from 'react'
+import Banner from '../components/Banner'
+import Intro from '../components/Intro'
+import FeaturedProperty from '../components/FeaturedProperty'
 
-const Home = () => {
-  return <div>Hello World</div>
-}
+const Home = () => (
+  <div>
+    <Banner />
+    <Intro />
+    <FeaturedProperty />
+  </div>
+)
 
 export default Home
