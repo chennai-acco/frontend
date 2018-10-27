@@ -18,9 +18,9 @@ const Meta = () => (
     <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/static/css/font-awesome-animation.min.css" />
     <link rel="stylesheet" href="/static/css/responsive.css" />
-    <link rel="stylesheet" href="/static/css/color-skin/default.css" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
     <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/css/color-skin/default.css" />
     <title>Chennai Acco</title>
   </Head>
 )
