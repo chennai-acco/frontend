@@ -239,7 +239,7 @@ class CreateProperty extends Component {
             className="property-submit"
             onSubmit={async e => {
               e.preventDefault()
-              const res = await createProperty()
+              await createProperty()
               Router.push({
                 pathname: '/'
               })
