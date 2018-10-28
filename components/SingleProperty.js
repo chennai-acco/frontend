@@ -3,6 +3,8 @@ import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import Link from 'next/link'
 
+import ImageSlider from './ImageSlider'
+
 const PLACE_QUERY = gql`
   query PLACE_QUERY($id: ID!) {
     place(where: { id: $id }) {
@@ -42,6 +44,8 @@ const SingleProperty = props => (
         pricing
       } = data.place
 
+      const imageFilePaths = pictures.map(item => item.url)
+
       return (
         <div className="col-md-9 col-sm-9 property-single left-block">
           <Link
@@ -66,7 +70,9 @@ const SingleProperty = props => (
               for rent
             </span>
 
-            {/* <ImageSlider images={imageFilePaths} controls /> */}
+            {imageFilePaths.length > 0 && (
+              <ImageSlider images={imageFilePaths} controls />
+            )}
           </div>
 
           <div className="row mb-40">
