@@ -1,5 +1,8 @@
 import styled from 'styled-components'
+import Link from 'next/link'
+
 import Nav from './Nav'
+import User from './User'
 
 const HiddenDiv = styled.div`
   display: none;
@@ -17,7 +20,12 @@ const UserHeader = () => (
           <div className="col-md-6 col-sm-6 col-xs-7">
             <ul className="header-links pull-right">
               <li>
-                <span>Welcome, Guest</span>
+                <User>
+                  {({ data: { me } }) => {
+                    if (me) return <span>Welcome, {me.firstName}!</span>
+                    return <span>Welcome, Guest!</span>
+                  }}
+                </User>
               </li>
 
               <li>
@@ -25,7 +33,9 @@ const UserHeader = () => (
               </li>
 
               <li>
-                <a href="#">Signup</a>
+                <Link href="/signup">
+                  <a>Signup</a>
+                </Link>
               </li>
             </ul>
           </div>
