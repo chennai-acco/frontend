@@ -34,7 +34,7 @@ const Nav = () => (
       <NavItem eventKey={1} href="/">
         Home
       </NavItem>
-      <NavItem eventKey={2} href="/propertylist">
+      <NavItem eventKey={2} href="/properties">
         Properties
       </NavItem>
       <NavItem eventKey={3} href="/">

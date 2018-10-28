@@ -1,6 +1,7 @@
 import React from 'react'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
+import Link from 'next/link'
 
 const PLACE_QUERY = gql`
   query PLACE_QUERY($id: ID!) {
@@ -43,6 +44,15 @@ const SingleProperty = props => (
 
       return (
         <div className="col-md-9 col-sm-9 property-single left-block">
+          <Link
+            href={{
+              pathname: '/addpicture',
+              query: { id: props.id }
+            }}
+          >
+            <a className="btn btn-success">Add Pictures</a>
+          </Link>
+
           <div className="title mb-20">
             <h2 className="mb-0 lh-normal">{name}</h2>
             <span>Greams Road / Chennai</span>

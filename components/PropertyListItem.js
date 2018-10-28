@@ -3,6 +3,10 @@ import Link from 'next/link'
 
 const PropertyListItem = props => {
   const { data } = props
+  let imageSrc = '../static/images/featured3.jpg'
+  if (data.pictures.length > 0) {
+    imageSrc = data.pictures[0].url
+  }
   return (
     <div className="property-wrap mb-20">
       <div className="ppt-list list-vw mb-30 featured">
@@ -11,19 +15,28 @@ const PropertyListItem = props => {
             {data.pricing.currency} {data.pricing.perNight}
           </span>
           <span className="tag right text-uppercase primary-bg">for rent</span>
-          <a href="#dummy" className="image-effect overlay">
-            <img
-              src="https://res.cloudinary.com/vimal-wesbos-tutorial/image/upload/v1540139077/samples/landscapes/nature-mountains.jpg"
-              alt={data.name}
-              width="349"
-              height="226"
-            />
-          </a>
+          <Link
+            href={{
+              pathname: '/property',
+              query: { id: data.id }
+            }}
+          >
+            <a className="image-effect overlay">
+              <img src={imageSrc} alt={data.name} width="349" height="226" />
+            </a>
+          </Link>
         </figure>
 
         <div className="content">
           <h4 className="mb-0">
-            <a href="#dummy">{data.name}</a>
+            <Link
+              href={{
+                pathname: '/property',
+                query: { id: data.id }
+              }}
+            >
+              <a>{data.name}</a>
+            </Link>
           </h4>
 
           <div className="mb-15">Chennai</div>
