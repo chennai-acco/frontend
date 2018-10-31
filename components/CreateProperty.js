@@ -52,7 +52,7 @@ class CreateProperty extends Component {
     numBeds: 3,
     numBaths: 4,
     popularity: 0,
-    host: 'cjnnq1o330udn0b12ry2miv9b',
+    host: this.props.id,
     lat: 100,
     lng: 200,
     address: 'Chennai',
