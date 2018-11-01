@@ -12,8 +12,6 @@ const SignupPage = () => (
     <div className="container">
       <Columns>
         <Signup />
-        <Signup />
-        <Signup />
       </Columns>
     </div>
   </div>

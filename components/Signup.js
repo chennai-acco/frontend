@@ -65,55 +65,65 @@ class Signup extends Component {
               <fieldset disabled={loading} aria-busy={loading}>
                 <h5>Signup for an account</h5>
 
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="email"
-                  value={this.state.email}
-                  onChange={this.saveToState}
-                />
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="email"
+                    value={this.state.email}
+                    onChange={this.saveToState}
+                  />
+                </div>
 
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="password"
-                  value={this.state.password}
-                  onChange={this.saveToState}
-                />
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="password"
+                    value={this.state.password}
+                    onChange={this.saveToState}
+                  />
+                </div>
 
-                <label htmlFor="firstName">FirstName</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="firstName"
-                  value={this.state.firstName}
-                  onChange={this.saveToState}
-                />
+                <div className="form-group">
+                  <label htmlFor="firstName">FirstName</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="firstName"
+                    value={this.state.firstName}
+                    onChange={this.saveToState}
+                  />
+                </div>
 
-                <label htmlFor="lastName">LastName</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="lastName"
-                  value={this.state.lastName}
-                  onChange={this.saveToState}
-                />
+                <div className="form-group">
+                  <label htmlFor="lastName">LastName</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="lastName"
+                    value={this.state.lastName}
+                    onChange={this.saveToState}
+                  />
+                </div>
 
-                <label htmlFor="phone">Phone</label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  placeholder="phone"
-                  value={this.state.phone}
-                  onChange={this.saveToState}
-                />
+                <div className="form-group">
+                  <label htmlFor="phone">Phone</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="phone"
+                    value={this.state.phone}
+                    onChange={this.saveToState}
+                  />
+                </div>
 
                 <button type="submit">Sign Up!</button>
               </fieldset>
