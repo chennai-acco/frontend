@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import Nav from './Nav'
 import User from './User'
+import Signout from './Signout'
 
 const HiddenDiv = styled.div`
   display: none;
@@ -37,6 +38,12 @@ const UserHeader = () => (
                   <li>
                     <a href="#">About Us</a>
                   </li>
+
+                  {me && (
+                    <li>
+                      <Signout />
+                    </li>
+                  )}
 
                   {!me && (
                     <li>

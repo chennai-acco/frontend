@@ -1542,6 +1542,7 @@ header.scrolled .navbar-default .navbar-nav li ul.sub-menu li a:hover,
 .main-title.text-white h2,
 ul.social-icons li a,
 .header-top a,
+.header-top button,
 .header-top,
 .navbar-default .navbar-nav li.nav-btn a:hover,
 header.style2.scrolled .navbar-nav li.nav-btn a,
@@ -1567,6 +1568,23 @@ header.style2.scrolled .navbar-nav li.nav-btn a,
 .blog-single .btn-wrap a:hover,
 .banner-content h2 a {
   color: #fff;
+}
+
+.header-top button {
+  background-color: transparent;
+}
+
+.header-top button,
+.header-top button:hover {
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 1;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header-top button:hover {
+  color: #27ae60;
 }
 
 .btn,
