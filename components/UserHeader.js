@@ -17,28 +17,38 @@ const UserHeader = () => (
             <HiddenDiv />
           </div>
 
-          <div className="col-md-6 col-sm-6 col-xs-7">
-            <ul className="header-links pull-right">
-              <li>
-                <User>
-                  {({ data: { me } }) => {
-                    if (me) return <span>Welcome, {me.firstName}!</span>
-                    return <span>Welcome, Guest!</span>
-                  }}
-                </User>
-              </li>
+          <User>
+            {({ data: { me } }) => (
+              <div className="col-md-6 col-sm-6 col-xs-7">
+                <ul className="header-links pull-right">
+                  {me && (
+                    <>
+                      <li>
+                        <span>Welcome, {me.firstName}!</span>
+                      </li>
+                      <li>
+                        <Link href="/sell">
+                          <a>Create Property</a>
+                        </Link>
+                      </li>
+                    </>
+                  )}
 
-              <li>
-                <a href="#">About Us</a>
-              </li>
+                  <li>
+                    <a href="#">About Us</a>
+                  </li>
 
-              <li>
-                <Link href="/signup">
-                  <a>Signup</a>
-                </Link>
-              </li>
-            </ul>
-          </div>
+                  {!me && (
+                    <li>
+                      <Link href="/signup">
+                        <a>Sign In</a>
+                      </Link>
+                    </li>
+                  )}
+                </ul>
+              </div>
+            )}
+          </User>
         </div>
       </div>
     </div>
