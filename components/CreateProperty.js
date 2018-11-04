@@ -14,7 +14,6 @@ const CREATE_PROPERTY_MUTATION = gql`
     $numBeds: Int!
     $numBaths: Int!
     $popularity: Int!
-    $host: ID!
     $amenities: AmenitiesInput!
     $pricing: PricingInput!
     $location: LocationInput!
@@ -30,7 +29,6 @@ const CREATE_PROPERTY_MUTATION = gql`
         numBeds: $numBeds
         numBaths: $numBaths
         popularity: $popularity
-        host: $host
         amenities: $amenities
         pricing: $pricing
         location: $location
@@ -52,7 +50,6 @@ class CreateProperty extends Component {
     numBeds: 3,
     numBaths: 4,
     popularity: 0,
-    host: this.props.id,
     lat: 100,
     lng: 200,
     address: 'Chennai',
